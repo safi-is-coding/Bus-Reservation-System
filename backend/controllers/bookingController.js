@@ -16,6 +16,7 @@ exports.bookSeats = async (req, res) => {
         if (bus.seatsAvailable < seatsBooked) {
             return res.status(400).json({ message: 'Not enough seats available' });
         }
+        
 
         // Create a new booking
         const newBooking = new Booking({
